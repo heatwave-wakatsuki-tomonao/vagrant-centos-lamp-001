@@ -1,0 +1,35 @@
+目的
+　これは Vagrant を使って、CentOS 6.5 で LAMP 環境を構築するためのファイルのセットです。
+
+前提
+　使用する Box：
+　　Vagrantbox.es の CentOS 6.5 i386 Minimal (VirtualBox Guest Additions 4.2.16, Chef 11.6.0, Puppet 3.2.3)
+　　（URL:https://dl.dropbox.com/s/3fgr7lbvcpn51py/centos_6-5_i386.box）
+
+　ネットワーク関連
+　　ネットワーク：ブリッジ接続
+　　IPアドレス：ユーザが入力したもの
+　　サブネットマスク：255.255.255.0
+　　DNS：192.168.1.1
+
+　Apache Web Server のドキュメントルートディレクトリ：.\html
+
+　MySQL
+　　root パスワード：mysql
+
+使い方
+　start.bat を実行してください。
+
+動作
+1. 初回実行時
+　fillup/centos-6.5-i386-minimal がローカルに追加されていない場合、ダウンロードして追加します。
+　fillup/centos-6.5-i386-minimal を元に仮想マシンを作成、起動します。
+　ユーザが指定した IP アドレスを仮想マシンに設定します。
+　Apache Web Server、PHP、MySQL サーバのパッケージをインストールし、設定します。
+　仮想マシンを起動します。
+
+2. 2回目以降の実行時
+　仮想マシンを起動します。
+
+注意事項
+　基本的にエラー処理を行なっていないため、問題が発生した場合は最初からやり直してみてください。
